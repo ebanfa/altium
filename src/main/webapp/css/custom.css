@@ -1,0 +1,111 @@
+.price-container span {
+	line-height: 1.4;
+	font-size: 16px!important;
+}
+
+
+.list-item {
+	border: 1px solid #F5F5F5;
+}
+
+.fixture-heading {
+	padding: 5px;
+	line-height: 1.4;
+	font-size: 14px!important;
+	background-color: #F5F5F5;
+}
+
+.fixture-heading h6,
+.fixture-heading span {
+	font-weight: 700;
+}
+
+.list-item .table-striped td, .table-striped th {
+	border: 1px solid #f5f5f5 !important;
+}
+
+.left-border-light {
+	border-left: 1px solid #f5f5f5 !important;
+}
+
+.data-item-header {
+	padding:10px;
+	color: #333;
+  	font-size: 12px;
+	background-color: #F5F5F5;
+}
+
+.data-item-header span {
+	text-transform: uppercase;
+}
+
+.data-item-flag{
+	
+}
+
+.data-item-country-name {
+	font-weight: 200;
+}
+
+.data-item-tournament-name {
+	font-weight: 200;
+}
+
+.data-item-body {
+	border: 1px solid #f5f5f5 !important;
+}
+
+.data-item-fixture-container {
+	height: 70px;
+	float: left;
+	text-align: center;
+}
+
+.data-item-fixture-favorite-container {
+	width: 15%;
+  	line-height: 60px;
+  	font-size: 25px;
+}
+
+.data-item-fixture-favorite-container span {
+	color: #FFC107!important;
+  	font-size: 30px!important;
+}
+
+.data-item-fixture-teams-container {
+	width: 55%;
+  	line-height: 30px;
+  	text-align: left;
+  	padding-left: 10px;
+}
+
+.data-item-fixture-teams-container span {
+	color: #333!important;
+}
+
+.data-item-fixture-time-container {
+	width: 10%;
+  	line-height: 60px;
+}
+
+.data-item-fixture-team-scores-container {
+	width: 10%;
+  	line-height: 30px;
+}
+
+.data-item-fixture-odds-container {
+	width: 10%;
+  	line-height: 20px;
+}
+
+.data-item-fixture-container span {
+	display: inline-block;
+  	vertical-align: middle;
+  	line-height: normal;
+  	color: maroon;
+  	font-size: 12px;
+}
+
+.data-item-fixture-container div {
+	border-top: 2px dashed #f5f5f5 !important;
+}

@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Material Admin</title>
+
+        <!-- Vendor CSS -->
+        <link href="vendors/bower_components/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
+        <link href="vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+        <link href="vendors/bower_components/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+        <link href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+        <link href="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+
+        <!-- CSS -->
+        <link href="css/app_1.min.css" rel="stylesheet">
+        <link href="css/app_2.min.css" rel="stylesheet">
+
+    </head>
+    <body>
+    	<div id="app-container">
+    		<div id=""></div>
+	        <header id="header" class="clearfix" data-ma-theme="blue">
+	            <ul class="h-inner">
+	                <li class="hi-trigger ma-trigger" data-ma-action="sidebar-open" data-ma-target="#sidebar">
+	                    <div class="line-wrap">
+	                        <div class="line top"></div>
+	                        <div class="line center"></div>
+	                        <div class="line bottom"></div>
+	                    </div>
+	                </li>
+	
+	                <li class="hi-logo hidden-xs">
+	                    <a href="index.html">Live Sports Fix</a>
+	                </li>
+	            </ul>
+	
+	            <!-- Top Search Content -->
+	            <div class="h-search-wrap">
+	                <div class="hsw-inner">
+	                    <i class="hsw-close zmdi zmdi-arrow-left" data-ma-action="search-close"></i>
+	                    <input type="text">
+	                </div>
+	            </div>
+	        </header>
+	
+	        <section id="main">
+	            
+	            <aside id="sidebar" class="sidebar c-overflow"></aside>
+	            <section id="content">
+	                <div class="container">
+	                    <div class="block-header">
+	                        <h2>Dashboard</h2>
+	
+	                        <ul class="actions">
+	                            <li>
+	                                <a href="index.html">
+	                                    <i class="zmdi zmdi-trending-up"></i>
+	                                </a>
+	                            </li>
+	                            <li>
+	                                <a href="index.html">
+	                                    <i class="zmdi zmdi-check-all"></i>
+	                                </a>
+	                            </li>
+	                            <li class="dropdown">
+	                                <a href="index.html" data-toggle="dropdown">
+	                                    <i class="zmdi zmdi-more-vert"></i>
+	                                </a>
+	
+	                                <ul class="dropdown-menu dropdown-menu-right">
+	                                    <li>
+	                                        <a href="index.html">Refresh</a>
+	                                    </li>
+	                                    <li>
+	                                        <a href="index.html">Manage Widgets</a>
+	                                    </li>
+	                                    <li>
+	                                        <a href="index.html">Widgets Settings</a>
+	                                    </li>
+	                                </ul>
+	                            </li>
+	                        </ul>
+	
+	                    </div>
+	
+	                    <div id="list" class="card">
+	                        
+                        <div class="list-group lg-odd-black">
+                            <div class="action-header clearfix">
+                                <div class="ah-label hidden-xs">Some text here</div>
+
+                                <div class="ah-search">
+                                    <input type="text" placeholder="Start typing..." class="ahs-input">
+
+                                    <i class="ahs-close" data-ma-action="action-header-close">&times;</i>
+                                </div>
+
+                                <ul class="actions">
+                                    <li>
+                                        <a href="list-view.html" data-ma-action="action-header-open">
+                                            <i class="zmdi zmdi-search"></i>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="list-view.html">
+                                            <i class="zmdi zmdi-time"></i>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="list-view.html" data-toggle="dropdown" aria-expanded="true">
+                                            <i class="zmdi zmdi-sort"></i>
+                                        </a>
+
+                                        <ul class="dropdown-menu dropdown-menu-right">
+                                            <li>
+                                                <a href="list-view.html">Last Modified</a>
+                                            </li>
+                                            <li>
+                                                <a href="list-view.html">Last Edited</a>
+                                            </li>
+                                            <li>
+                                                <a href="list-view.html">Name</a>
+                                            </li>
+                                            <li>
+                                                <a href="list-view.html">Date</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="list-view.html">
+                                            <i class="zmdi zmdi-info"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="list-group-item media">
+                                <div class="checkbox pull-left">
+                                    <label>
+                                        <input type="checkbox" value="">
+                                        <i class="input-helper"></i>
+                                    </label>
+                                </div>
+
+                                <div class="pull-right">
+                                    <div class="actions dropdown">
+                                        <a href="list-view.html" data-toggle="dropdown" aria-expanded="true">
+                                            <i class="zmdi zmdi-more-vert"></i>
+                                        </a>
+
+                                        <ul class="dropdown-menu dropdown-menu-right">
+                                            <li>
+                                                <a href="list-view.html">Edit</a>
+                                            </li>
+                                            <li>
+                                                <a href="list-view.html">Delete</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="media-body">
+                                    <div class="lgi-heading">Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam</div>
+                                </div>
+                            </div>
+
+                            <div class="list-group-item media">
+                                <div class="checkbox pull-left">
+                                    <label>
+                                        <input type="checkbox" value="">
+                                        <i class="input-helper"></i>
+                                    </label>
+                                </div>
+
+                                <div class="pull-right">
+                                    <div class="actions dropdown">
+                                        <a href="list-view.html" data-toggle="dropdown" aria-expanded="true">
+                                            <i class="zmdi zmdi-more-vert"></i>
+                                        </a>
+
+                                        <ul class="dropdown-menu dropdown-menu-right">
+                                            <li>
+                                                <a href="list-view.html">Edit</a>
+                                            </li>
+                                            <li>
+                                                <a href="list-view.html">Delete</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="media-body">
+                                    <div class="lgi-heading">Dulla vel metus scelerisque ante sollicitudin commodo purus odio</div>
+                                    <small class="lgi-text">Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</small>
+                                </div>
+                            </div>
+
+                            <div class="list-group-item media">
+                                <div class="checkbox pull-left">
+                                    <label>
+                                        <input type="checkbox" value="">
+                                        <i class="input-helper"></i>
+                                    </label>
+                                </div>
+
+                                <div class="pull-right">
+                                    <div class="actions dropdown">
+                                        <a href="list-view.html" data-toggle="dropdown" aria-expanded="true">
+                                            <i class="zmdi zmdi-more-vert"></i>
+                                        </a>
+
+                                        <ul class="dropdown-menu dropdown-menu-right">
+                                            <li>
+                                                <a href="list-view.html">Edit</a>
+                                            </li>
+                                            <li>
+                                                <a href="list-view.html">Delete</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="media-body">
+                                    <div class="lgi-heading">Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam</div>
+                                    <ul class="lgi-attrs">
+                                        <li>Date Created: 09/06/1988</li>
+                                        <li>Members: 78954</li>
+                                        <li>Published: No</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="list-group-item media">
+                                <div class="checkbox pull-left">
+                                    <label>
+                                        <input type="checkbox" value="">
+                                        <i class="input-helper"></i>
+                                    </label>
+                                </div>
+
+                                <div class="pull-right">
+                                    <div class="actions dropdown">
+                                        <a href="list-view.html" data-toggle="dropdown" aria-expanded="true">
+                                            <i class="zmdi zmdi-more-vert"></i>
+                                        </a>
+
+                                        <ul class="dropdown-menu dropdown-menu-right">
+                                            <li>
+                                                <a href="list-view.html">Edit</a>
+                                            </li>
+                                            <li>
+                                                <a href="list-view.html">Delete</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="media-body">
+                                    <div class="lgi-heading">Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam</div>
+                                    <small class="lgi-text">An erant explicari salutatus duo, sumo doming delicata in cum. Eos at augue viderer principes</small>
+
+                                    <ul class="lgi-attrs">
+                                        <li>Date Created: 09/06/1988</li>
+                                        <li>Members: 78954</li>
+                                        <li>Published: No</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="list-group-item media">
+                                <div class="checkbox pull-left">
+                                    <label>
+                                        <input type="checkbox" value="">
+                                        <i class="input-helper"></i>
+                                    </label>
+                                </div>
+                                <div class="pull-left">
+                                    <img class="lgi-img" src="img/demo/profile-pics/1.jpg" alt="">
+                                </div>
+
+                                <div class="pull-right">
+                                    <div class="actions dropdown">
+                                        <a href="list-view.html" data-toggle="dropdown" aria-expanded="true">
+                                            <i class="zmdi zmdi-more-vert"></i>
+                                        </a>
+
+                                        <ul class="dropdown-menu dropdown-menu-right">
+                                            <li>
+                                                <a href="list-view.html">Edit</a>
+                                            </li>
+                                            <li>
+                                                <a href="list-view.html">Delete</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="media-body">
+                                    <div class="lgi-heading">Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam</div>
+                                    <small class="lgi-text">Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue ultricies</small>
+                                </div>
+                            </div>
+
+                            <div class="list-group-item media">
+                                <div class="checkbox pull-left">
+                                    <label>
+                                        <input type="checkbox" value="">
+                                        <i class="input-helper"></i>
+                                    </label>
+                                </div>
+                                <div class="pull-left">
+                                    <img class="lgi-img" src="img/demo/profile-pics/2.jpg" alt="">
+                                </div>
+
+                                <div class="pull-right">
+                                    <div class="actions dropdown">
+                                        <a href="list-view.html" data-toggle="dropdown" aria-expanded="true">
+                                            <i class="zmdi zmdi-more-vert"></i>
+                                        </a>
+
+                                        <ul class="dropdown-menu dropdown-menu-right">
+                                            <li>
+                                                <a href="list-view.html">Edit</a>
+                                            </li>
+                                            <li>
+                                                <a href="list-view.html">Delete</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="media-body">
+                                    <div class="lgi-heading">Wel ea elit iuvaret. Mea labitur definitiones ex, id atqui accusata vix, vim nibh mandamus ad</div>
+                                    <small class="lgi-text">Wendy create ipsum dolor sit amet, per cu solet docendi ntoenstion</small>
+
+                                    <ul class="lgi-attrs">
+                                        <li>Date Created: 09/06/1988</li>
+                                        <li>Members: 78954</li>
+                                        <li>Published: No</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="list-group-item media">
+                                <div class="checkbox pull-left">
+                                    <label>
+                                        <input type="checkbox" value="">
+                                        <i class="input-helper"></i>
+                                    </label>
+                                </div>
+                                <div class="pull-left">
+                                    <img class="lgi-img" src="img/demo/profile-pics/3.jpg" alt="">
+                                </div>
+
+                                <div class="pull-right">
+                                    <div class="actions dropdown">
+                                        <a href="list-view.html" data-toggle="dropdown" aria-expanded="true">
+                                            <i class="zmdi zmdi-more-vert"></i>
+                                        </a>
+
+                                        <ul class="dropdown-menu dropdown-menu-right">
+                                            <li>
+                                                <a href="list-view.html">Edit</a>
+                                            </li>
+                                            <li>
+                                                <a href="list-view.html">Delete</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="media-body">
+                                    <div class="lgi-heading">Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam</div>
+
+                                    <ul class="lgi-attrs">
+                                        <li>Date Created: 11/06/1988</li>
+                                        <li>Members: 212</li>
+                                        <li>Published: Yes</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="list-group-item media">
+                                <div class="checkbox pull-left">
+                                    <label>
+                                        <input type="checkbox" value="">
+                                        <i class="input-helper"></i>
+                                    </label>
+                                </div>
+                                <div class="pull-left">
+                                    <img class="lgi-img" src="img/demo/profile-pics/4.jpg" alt="">
+                                </div>
+
+                                <div class="pull-right">
+                                    <div class="actions dropdown">
+                                        <a href="list-view.html" data-toggle="dropdown" aria-expanded="true">
+                                            <i class="zmdi zmdi-more-vert"></i>
+                                        </a>
+
+                                        <ul class="dropdown-menu dropdown-menu-right">
+                                            <li>
+                                                <a href="list-view.html">Edit</a>
+                                            </li>
+                                            <li>
+                                                <a href="list-view.html">Delete</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="media-body">
+                                    <div class="lgi-heading">Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam</div>
+                                    <small class="lgi-text">Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue ultricies</small>
+                                </div>
+                            </div>
+
+                            <div class="list-group-item media">
+                                <div class="checkbox pull-left">
+                                    <label>
+                                        <input type="checkbox" value="">
+                                        <i class="input-helper"></i>
+                                    </label>
+                                </div>
+                                <div class="media-body">
+                                    <div class="lgi-heading">Dulla vel metus scelerisque ante sollicitudin commodo purus odio</div>
+                                    <small class="lgi-text">Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</small>
+                                </div>
+                            </div>
+
+                            <div class="list-group-item media">
+                                <div class="checkbox pull-left">
+                                    <label>
+                                        <input type="checkbox" value="">
+                                        <i class="input-helper"></i>
+                                    </label>
+                                </div>
+
+                                <div class="pull-right">
+                                    <div class="actions dropdown">
+                                        <a href="list-view.html" data-toggle="dropdown" aria-expanded="true">
+                                            <i class="zmdi zmdi-more-vert"></i>
+                                        </a>
+
+                                        <ul class="dropdown-menu dropdown-menu-right">
+                                            <li>
+                                                <a href="list-view.html">Edit</a>
+                                            </li>
+                                            <li>
+                                                <a href="list-view.html">Delete</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="media-body">
+                                    <div class="lgi-heading">Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam</div>
+                                    <ul class="lgi-attrs">
+                                        <li>Date Created: 09/06/1988</li>
+                                        <li>Members: 78954</li>
+                                        <li>Published: No</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="list-group-item media">
+                                <div class="checkbox pull-left">
+                                    <label>
+                                        <input type="checkbox" value="">
+                                        <i class="input-helper"></i>
+                                    </label>
+                                </div>
+
+                                <div class="pull-right">
+                                    <div class="actions dropdown">
+                                        <a href="list-view.html" data-toggle="dropdown" aria-expanded="true">
+                                            <i class="zmdi zmdi-more-vert"></i>
+                                        </a>
+
+                                        <ul class="dropdown-menu dropdown-menu-right">
+                                            <li>
+                                                <a href="list-view.html">Edit</a>
+                                            </li>
+                                            <li>
+                                                <a href="list-view.html">Delete</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="media-body">
+                                    <div class="lgi-heading">Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam</div>
+                                    <small class="lgi-text">An erant explicari salutatus duo, sumo doming delicata in cum. Eos at augue viderer principes</small>
+
+                                    <ul class="lgi-attrs">
+                                        <li>Date Created: 09/06/1988</li>
+                                        <li>Members: 78954</li>
+                                        <li>Published: No</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+	
+	                    </div>
+	                </div>
+	            </section>
+	        </section>
+	
+	        <footer id="footer">
+	            Copyright &copy; 2015 Material Admin
+	
+	            <ul class="f-menu">
+	                <li><a href="index.html">Home</a></li>
+	                <li><a href="index.html">Dashboard</a></li>
+	                <li><a href="index.html">Reports</a></li>
+	                <li><a href="index.html">Support</a></li>
+	                <li><a href="index.html">Contact</a></li>
+	            </ul>
+	        </footer>
+	
+	        <!-- Older IE warning message -->
+	        <!--[if lt IE 9]>
+	            <div class="ie-warning">
+	                <h1 class="c-white">Warning!!</h1>
+	                <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+	                <div class="iew-container">
+	                    <ul class="iew-download">
+	                        <li>
+	                            <a href="http://www.google.com/chrome/">
+	                                <img src="img/browsers/chrome.png" alt="">
+	                                <div>Chrome</div>
+	                            </a>
+	                        </li>
+	                        <li>
+	                            <a href="https://www.mozilla.org/en-US/firefox/new/">
+	                                <img src="img/browsers/firefox.png" alt="">
+	                                <div>Firefox</div>
+	                            </a>
+	                        </li>
+	                        <li>
+	                            <a href="http://www.opera.com">
+	                                <img src="img/browsers/opera.png" alt="">
+	                                <div>Opera</div>
+	                            </a>
+	                        </li>
+	                        <li>
+	                            <a href="https://www.apple.com/safari/">
+	                                <img src="img/browsers/safari.png" alt="">
+	                                <div>Safari</div>
+	                            </a>
+	                        </li>
+	                        <li>
+	                            <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+	                                <img src="img/browsers/ie.png" alt="">
+	                                <div>IE (New)</div>
+	                            </a>
+	                        </li>
+	                    </ul>
+	                </div>
+	                <p>Sorry for the inconvenience!</p>
+	            </div>
+	        <![endif]-->
+        
+    	</div>
+
+        <!-- Javascript Libraries -->
+        <script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="vendors/bower_components/flot/jquery.flot.js"></script>
+        <script src="vendors/bower_components/flot/jquery.flot.resize.js"></script>
+        <script src="vendors/bower_components/flot.curvedlines/curvedLines.js"></script>
+        <script src="vendors/sparklines/jquery.sparkline.min.js"></script>
+        <script src="vendors/bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+
+        <script src="vendors/bower_components/moment/min/moment.min.js"></script>
+        <script src="vendors/bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+        <script src="vendors/bower_components/simpleWeather/jquery.simpleWeather.min.js"></script>
+        <script src="vendors/bower_components/Waves/dist/waves.min.js"></script>
+        <script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+        <script src="vendors/bower_components/sweetalert2/dist/sweetalert2.min.js"></script>
+        <script src="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+        <!-- Placeholder for IE9 -->
+        <!--[if IE 9 ]>
+            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+        <![endif]-->
+
+        <script src="js/app.min.js"></script>
+    </body>
+</html>

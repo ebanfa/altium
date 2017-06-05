@@ -1,0 +1,545 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	  <!-- These scirpt and css resource in only loaded in index.jsp page in product mode. Loaded in all pages in developing mode.-->
+
+<script type="text/javascript">
+	var g_GlobalInfo = new Object();
+	g_GlobalInfo.Language="en_US";
+	g_GlobalInfo.Charset="UTF-8";
+	g_GlobalInfo.WebRoot="http://myaccount.orange.co.ke/";
+	g_GlobalInfo.Version="1.0";
+	g_GlobalInfo.Calendar="usa";
+	g_GlobalInfo.DateFormat="yyyy-MM-dd HH:mm:ss";
+	g_GlobalInfo.CurrencyPrecision = "2";
+	g_GlobalInfo.AuditLog ="TRUE";
+	g_GlobalInfo.projNamespace="kenyaFT";
+	g_GlobalInfo.realRootPath="/ztesoft/ocs/r11/web/tomcat/webapps/selfservice/";
+	g_GlobalInfo.LogExtComments="";
+	g_GlobalInfo.SpId = "null" == null ? "0" : "null";
+</script>
+
+<script languange="javascript" defer>
+  g_GlobalInfo.AlignRightString="null";
+  g_GlobalInfo.ImgFilter="null";
+  g_GlobalInfo.PosLeftString="null";
+  g_GlobalInfo.Direction="null";
+  g_GlobalInfo.Email="null";
+  g_GlobalInfo.SelComponentIDAlign="null";
+  var g_imageUrl = "http://myaccount.orange.co.ke/frm/img";
+</script>
+
+<link href="http://myaccount.orange.co.ke/3G/style/en_US/selfservice.css" rel="stylesheet" type="text/css"> 
+  
+<script language="javascript" charset="UTF-8" defer=true>
+var ADD		 = "Add" ;
+var MOD		 = "Modify" ;
+var EDIT	 = "Edit" ;
+var DELETE	 = "Delete" ;
+var MORE	 = "More" ;
+var RECYCLE	 = "Recycle" ;
+var CREDIT	 = "Credit" ;
+var DEBIT	 = "Debit" ;
+var FROM	 = "From" ;
+var TO		 = "To" ;
+var KEY_FROM = "From" ;
+var KEY_TO   = "To" ;
+var MIN		 = "(min)" ;
+var NEW		 = "New" ;
+var EXIST	 = "Exist" ;
+var Cancel	 = "Cancel" ;
+var RESTORE	 = "Restore" ;
+var PREVIOUS = "<<" ;
+var NEXT	 = ">>" ;
+var PREVIOUS_CHAR = "Previous" ;
+var NEXT_CHAR	 = "Next" ;
+var AMOUNT	 = "Amount" ;
+var TOTAL	 = "Total" ;
+var SN		 = "SN" ;
+var PASSWORD = "Password" ;
+var KEY_MORE = "More..." ;
+var STATUS	 = "Status" ;
+var MSISDN	 = "MSISDN" ;
+var GL_ID	 = "GL ID" ;
+var SEQ		 = "Seq." ;
+var PRINT	 = "Print Invoice" ;
+var YES		 = "Yes" ;
+var NO		 = "No" ;
+var DN		 = "Contact NO." ;
+var EMAIL	 = "Email" ;
+var COMMENTS = "Comments" ;
+var OK = "OK";
+var CANCEL = "Cancel";
+var ERROR = "Error" ;
+var PROMPT = "Prompt" ;
+var ALARM = "Alarm" ;
+var INFORMATION = "Information";
+var ERROR_CODE = "Error Code:";
+var ERROR_MESSAGE = "Error Message:";
+var SYS_WELCOME_MSG	 = "Welcome to ZSMART Self Service System";
+var SS_SELECT_PLEASE_SELECT = '---Please Select---';
+var ELLIPSIS = "...";
+var BAL_CREDIT = "(Credit)" ;//add by wu.changwei è´§å¸æ ¼å¼åä½¿ç¨
+var BAL_DEBIT = "(Debit)" ;
+</script>
+
+<script language="javascript" defer>
+//window.defaultStatus = SYS_WELCOME_MSG + " " + "1.0";
+
+window.defaultStatus = "";
+</script>
+
+
+
+<script type="text/javascript" src="http://myaccount.orange.co.ke/frm/helper/ZTEsoft.js"></script>
+<script type="text/javascript" src="http://myaccount.orange.co.ke/frm/helper/extprototype.js"></script>
+
+<script language="javascript" src="http://myaccount.orange.co.ke/frm/helper/validator.js"></script>
+<script language="javascript" src="http://myaccount.orange.co.ke/frm/helper/interfaceadapter.js"></script>
+<!--pub-->
+
+
+	<script type="text/javascript" src="http://myaccount.orange.co.ke/frm/jquery/jquery-1.4.2.min.js"></script>
+
+
+<script language="javascript" src="http://myaccount.orange.co.ke/frm/jquery/cookie.js"></script>
+<script type="text/javascript" src="http://myaccount.orange.co.ke/frm/helper/ajaxhelper.js"></script>
+<script language="javascript" src="http://myaccount.orange.co.ke/frm/helper/date.js"></script>
+<script language="javascript" src="http://myaccount.orange.co.ke/frm/helper/i18e.js"></script>
+<script language="javascript" src="http://myaccount.orange.co.ke/frm/helper/dom.js"></script>
+
+<!--iframe corner and shadow-->
+<script language="javascript" src="http://myaccount.orange.co.ke/frm/jquery/plugins/jquery.bgiframe.js"></script>
+<script type="text/javascript" src="http://myaccount.orange.co.ke/frm/jquery/plugins/jquery.corner.js"></script>
+<script type="text/javascript" src="http://myaccount.orange.co.ke/frm/jquery/plugins/jquery.dropshadow.js"></script>
+<!--menu-->
+<script type="text/javascript" src="http://myaccount.orange.co.ke/frm/jquery/plugins/pupunzi-jquery.mb.menu/inc/jquery.metadata.js"></script>
+<script type="text/javascript" src="http://myaccount.orange.co.ke/frm/jquery/plugins/pupunzi-jquery.mb.menu/inc/jquery.hoverIntent.js"></script>
+<script type="text/javascript" src="http://myaccount.orange.co.ke/frm/jquery/plugins/pupunzi-jquery.mb.menu/inc/mbMenu.js"></script>
+<link rel="stylesheet" type="text/css" href="http://myaccount.orange.co.ke/frm/jquery/plugins/pupunzi-jquery.mb.menu/css/menu3G.css" media="screen" />
+<!--slider-->
+<script type="text/javascript" src="http://myaccount.orange.co.ke/frm/jquery/plugins/AnythingSlider/js/jquery.easing.1.2.js"></script>
+<script type="text/javascript" src="http://myaccount.orange.co.ke/frm/jquery/plugins/AnythingSlider/js/jquery.anythingslider.js"></script>
+<link rel="stylesheet" href="http://myaccount.orange.co.ke/frm/jquery/plugins/AnythingSlider/css/slider.css" type="text/css"/>
+<!--tips-->
+<script type="text/javascript" src="http://myaccount.orange.co.ke/frm/jquery/plugins/jquery.mbTooltip/inc/jquery.timers.js"></script>
+
+	<script type="text/javascript" src="http://myaccount.orange.co.ke/frm/jquery/plugins/jquery.mbTooltip/inc/mbTooltip.min.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="http://myaccount.orange.co.ke/frm/jquery/plugins/jquery.mbTooltip/css/mbTooltip.css">
+  <script language="javascript" >
+	var _floatDivHtml="<div onclick=\"$('#floatMsg').fadeOut()\" style=\"display:none;z-index:10000;width:240px;position:absolute;width:auto; background-color:#FFFFCC; border:1px solid #ccc; padding:5px; font-weight:bold\" id=\"floatMsg\">"
+  +"<img src="http://myaccount.orange.co.ke/3G/\&quot;images/alert-red.png\&quot;" border=\"0\" style=\"float:left\" />"
+  +"<span style=\"word-break:break-all;word-wrap:break-word; width:200px; padding-left:10px;\"></span>"
+  +"<a href="http://myaccount.orange.co.ke/3G/\&quot;#\"" onclick=\"$('#floatMsg').fadeOut()\">"
+  +"  <img src="http://myaccount.orange.co.ke/3G/\&quot;images/unchecked.gif\&quot;" border=\"0\" style=\"float:right\" /></a></div> ";
+  
+ var _maskHtml="<div   class=\"mask\" id=\"_divMask\" ><span class=\"mask_msg\"></span></div> "; 
+  
+ var _sysMsgHtml="<div   class=\"divSysMessage\" id=\"_divSysMsg\" ><table style=\"border:1px solid #333E;width:100%;height:100%; \" >"
+  +"<tr><td valign=\"top\"><img src="http://myaccount.orange.co.ke/3G/\&quot;images/unchecked.gif\&quot;"   border=\"0\" style=\"float:right\" /></a> </td></tr>"
+  +"<tr><td id=\"_divSysMainContent\"></td></tr>"
+    +"<tr><td align=\"right\" style=\"vertical-align: bottom;margin-bottom:10px;\" ><button id=\"_btnSysMsgOK\" class=\"button\" style=\"width:60px; height:20px;\" >OK</button>"
+   +" <button  id=\"_btnSysMsgCancel\" class=\"button\" style=\"width:60px; height:20px;\" >Cancel</button> </td></tr>"
+  +"  </table></div> "; 
+  
+	$(function(){
+		 if($("#floatMsg").length==0){
+		 	$("body").append(_floatDivHtml);
+		 	 $("input").click(function(){
+	         	$("#floatMsg").fadeOut();
+	         	
+	         }); 
+	         
+	          $("#floatMsg").bgiframe();
+		 }
+	 	 	
+	 	 if($("#_divMask").length==0){
+	 	 	$("body").append(_maskHtml);
+	 	 	$("#_divMask").bgiframe();
+	 	 }
+	 	 $(".bgiframe").fadeTo("fast",0); 
+	 	 if($("#divSysMessage").length==0){
+	 	 	$("body").append(_sysMsgHtml);
+	 	 }
+	 });
+	 
+ function showMask(msg)
+ {
+    $("#_divMask span").text(msg);
+    $("#_divMask").height($("body")[0].scrollHeight-2);
+	$("#_divMask").width($("body")[0].scrollWidth-2);
+    if(msg!=null && msg!="")
+    {
+    	var width=100;
+	 	var height=22;
+	 	var objBody=$("body")[0];
+	 	var top = (objBody.clientHeight) ? (objBody.clientHeight -  height)/2 : 1;
+	 	var left =  (objBody.clientWidth) ? (objBody.clientWidth - width)/2 : 1;
+	 		
+	 	$("#_divMask span").css("top",top+"px").css("left",left+"px").css("height",height+"px");
+    }
+ 	//$("#_divMask").fadeTo("slow",0.5);
+ 	$("#_divMask").show();
+ }
+ function hideMask(){$("#_divMask span").html(""); $("#_divMask").hide();}
+ function showError(msg,e,okCallBackFnc,cancelCallBackFnc)
+ {
+ 	if(e==null || e.Desc==null || e.Desc=="")
+ 	{
+ 		if(arguments.length>3)
+ 			showMessage(msg,okCallBackFnc,cancelCallBackFnc);
+ 		else
+ 			showMessage(msg,okCallBackFnc);
+ 	}
+ 	else
+ 	{
+ 		if(arguments.length>3)
+ 			showMessage("@_@"+e.Desc,okCallBackFnc,cancelCallBackFnc);
+ 		else
+ 			showMessage("@_@"+e.Desc,okCallBackFnc);	
+ 	}
+ }
+ function showMessage(msg, okCallBackFnc,cancelCallBackFnc)
+ {
+ 	showMask();
+ 	if(arguments.length>2)//quest
+ 	{
+ 		$("#_divSysMsg img").fadeTo('fast',0);
+ 		$("#_btnSysMsgCancel").show(); 
+ 	}else  
+ 	{
+ 		$("#_divSysMsg img").show();
+ 		$("#_btnSysMsgCancel").hide();
+ 		$("#_divSysMsg img").unbind("click");
+ 		$("#_divSysMsg img").click(function(){
+	     	$("#_divSysMsg").fadeOut("normal",okCallBackFnc );
+	     	hideMask();
+     	});
+ 	} 
+ 	$("#_btnSysMsgOK").unbind("click");
+ 	 $("#_btnSysMsgOK").click(function(){
+ 	 	
+     	$("#_divSysMsg").fadeOut("normal",okCallBackFnc );
+     	hideMask();
+     	
+     });
+     $("#_btnSysMsgCancel").unbind("click");
+      $("#_btnSysMsgCancel").click(function(){
+      	$("#_divSysMsg").fadeOut("normal",cancelCallBackFnc );
+     	hideMask();
+     	
+     });
+ 	
+ 	var width=330;
+ 	var height=160;
+ 	var objBody=$("body")[0];
+ 	var top = (objBody.clientHeight) ? (objBody.clientHeight - 80)/2 : 0;
+ 	var left =  (objBody.clientWidth) ? (objBody.clientWidth - width)/2 : 0;
+ 		
+ 	$("#_divSysMsg").css("top",top+"px").css("left",left+"px").css("width",width+"px").css("height",height+"px");
+ 	
+ 	//msg = (msg!=null && msg.length >= 150) ? msg.substring(0,150)+"...":msg;
+ 	
+ 	$("#_divSysMainContent").load('http://myaccount.orange.co.ke/3G/'+'showmessage.jsp?'+escape(msg));
+ 	
+ 	
+	$("#_divSysMsg").fadeTo("slow",0.8);
+	if(arguments.length>2)//quest
+ 	{
+ 		$("#_btnSysMsgCancel")[0].focus(); 
+ 	}else  
+ 	{
+ 		$("#_btnSysMsgOK")[0].focus(); 
+ 	}
+ }
+ 
+ 
+
+ function showAbsFloatMessage(msg,top,left,width,height,ignoreWidth)
+ {
+ 	if(!ignoreWidth && width==null)
+ 		width=200;
+ 	var objBody=$("body")[0];
+ 	if(top==null)
+ 		top = (objBody.clientHeight) ? (objBody.clientHeight - (height==null?200:height))/2 : 0;
+ 	if(left==null)
+ 		left =  (objBody.clientWidth) ? (objBody.clientWidth - width)/2 : 0;
+ 	
+   
+   $("#floatMsg").css("top",top+"px").css("left",left+"px");
+   if(width!=null)
+   	 $("#floatMsg").css("width",width+"px");
+   if(height!=null)
+   	 $("#floatMsg").css("height",height+"px");
+   $("#floatMsg span").html(msg);
+   $("#floatMsg").fadeIn();
+ }
+  function showFloatMessage(msg,ele,width,height,ignoreWidths)
+ {
+ 	var top = ele.offset().top+ele.height();
+	var left = ele.offset().left;
+	if(width==null && ignoreWidths==null)
+		ignoreWidths=true;
+	showAbsFloatMessage(msg,top,left,width,height,ignoreWidths);
+ }
+</script>
+
+<script type="text/javascript">
+	jQuery.fn.extend({
+	  Delegate: function(context, fun)
+		{
+			var args = Array.prototype.slice.call(arguments).slice(2);
+			return function()
+			{
+				return fun.apply(context, Array.prototype.slice.call(arguments).concat(args));
+			};
+		}
+	});
+
+  $(function(){
+    $("[title]").mbTooltip({ // also $([domElement]).mbTooltip  >>  in this case only children element are involved
+      opacity : .97,       //opacity
+      wait:500,           //before show
+      cssClass:"default",  // default = default
+      timePerWord:70,      //time to show in milliseconds per word
+      hasArrow:true,            // if you whant a little arrow on the corner
+      hasShadow:true,
+      imgPath:"http://myaccount.orange.co.ke/frm/jquery/plugins/jquery.mbTooltip/images/",
+      ancor:"element", //"parent"  you can ancor the tooltip to the mouse position or at the bottom of the element
+      shadowColor:"black", //the color of the shadow
+      mb_fade:200 //the time to fade-in
+    });
+     
+  });
+ 
+  $.g_LoginUser=null;
+   
+  	$.g_LoginUser={};
+    $.g_LoginUser.SubsId="81163610";
+	$.g_LoginUser.CustId="25822917";
+	$.g_LoginUser.AcctId="29713940";
+	
+	$.g_LoginUser.CustName="Eutychus";
+	$.g_LoginUser.Prefix="254";
+	$.g_LoginUser.AccNbr="773773976";
+	$.g_LoginUser.LoginDate="2016-12-31 00:17:43";
+	
+	$.g_LoginUser.PostPaid="N";
+	$.g_LoginUser.ProdSpecId="1";
+	$.g_LoginUser.ProdSpecName="Orange Tujuane";
+	$.g_LoginUser.ProdStateName="Active";
+	$.g_LoginUser.BrandType="IEW";
+	
+	$.g_LoginUser.LoginIp="154.122.35.137";
+	$.g_LoginUser.LoginHost="myaccount.orange.co.ke";
+	$.g_LoginUser.LoginPwd="";
+	$.g_LoginUser.OrgId="100";
+	$.g_LoginUser.BrandType="IEW";
+	
+</script>
+
+
+
+	
+ 
+
+<link href="http://myaccount.orange.co.ke/3G/style/en_US/pagecss/index.css" rel="stylesheet" type="text/css">   
+<link href="http://myaccount.orange.co.ke/3G/style/en_US/customcss/index.css" rel="stylesheet" type="text/css">    
+
+	<script type="text/javascript">
+	
+	//UR84244 confilct with jQuery when FF version lower than 3.6
+	 $(function(){   
+	    if($.browser.mozilla&&/3.5/.test(navigator.userAgent))
+	    {
+	    	 showMessage("SS_HINT_FIREFOX_VERSION_LOWER");
+	    	  $("#userLoginBtn").hide();
+	    }
+     });
+   
+	</script>
+
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Orange Kenya</title>
+</head>
+
+<body scroll="auto">
+  <div class="wrap">
+      <div class="header">
+      	<!--begin user-->
+      	    <script language="javascript">
+        $(function(){
+            $("#userLogoutBtn").click(function(){
+	            window.location.href="http://myaccount.orange.co.ke/login.do?action=logout3G";
+	        });
+        });
+    </script>
+
+	<div>      
+      <div id="logo"><a href="loading.gif.html#"></a></div>
+      
+      	<p>hello&nbsp;&nbsp;<span>Eutychus</span></p>
+      	<a href="loading.gif.html#" class="logout" id="userLogoutBtn">Log out</a>
+      	
+      	  <a href="loading.gif.html#" class="title">Internet Everywhere 3G+</a>
+      	
+      		 
+	</div>  
+      	<!--end user-->      
+      </div>
+      <div class="menu">
+        <!--begin menu-->
+            
+    
+    <script language="javascript">
+        $(function(){
+   		    //$("#menuContentFrame").load(hideLoadingPageFnc);
+   		    onMenuClickFnc('bss/home/home.jsp','tdHomePage');
+   		});
+   		   		
+   		function onMenuClickFnc(url,menuItemId)
+   		{
+   			if($.g_LoginUser==null)
+   			{
+   				showMessage("SS_HINT_LOGIN_FIRST",function(){window.location.href="http://myaccount.orange.co.ke/3G/login.jsp";});
+   				return;
+   			}
+   			if(url!=null && url!="")
+   			{
+   				$("#menuContent").hide();
+   			//	$("#loadingDiv").show();
+   				$("#menuContent").load(url,null,hideLoadingPageFnc);
+   				setMenuSelected(menuItemId);
+   			}
+   		}
+   		
+   		function setMenuSelected(menuItemId)
+   		{
+   			$('.rootVoice').removeClass('currentMenu');
+   			$("#"+menuItemId).addClass('currentMenu');
+   		}
+   		
+   		function pageInitCallBackFnc(){}
+   		function hideLoadingPageFnc()
+   		{
+   			$("#loadingDiv").hide();
+   			$("#menuContent").show();
+   			pageInitCallBackFnc();
+   		}
+    </script>
+    
+    
+          
+    <div class="RootMenu_top">
+      <div class="ssRootMenu">            
+        <table class="rootVoices" cellspacing='0' cellpadding='0' border='0'>
+          <tr>
+            <td id="tdHomePage" class="rootVoice {menu: 'empty'}" align="center" onclick="onMenuClickFnc('bss/home/home.jsp','tdHomePage');"><a href="loading.gif.html#">Home</a></td>
+          
+            <td id="tdSS_MY_PROFILE" class="rootVoice {menu: 'menuParentSS_MY_PROFILE'}" align="center" onclick="onMenuClickFnc('','tdSS_MY_PROFILE');"><a href="loading.gif.html#">My Profile</a></td>
+          
+            <td id="tdSS_TOP_UP_ACCOUNT" class="rootVoice {menu: 'empty'}" align="center" onclick="onMenuClickFnc('bss/rechargebycard/rechargebycard.jsp','tdSS_TOP_UP_ACCOUNT');"><a href="loading.gif.html#">Top Up Account</a></td>
+          
+            <td id="tdSS_MY_BUNDLE" class="rootVoice {menu: 'empty'}" align="center" onclick="onMenuClickFnc('bss/mybundle/mybundle.jsp','tdSS_MY_BUNDLE');"><a href="loading.gif.html#">Purchase Bundles</a></td>
+          
+            <td id="tdSS_ADVANCED_OPTIONS" class="rootVoice {menu: 'menuParentSS_ADVANCED_OPTIONS'}" align="center" onclick="onMenuClickFnc('','tdSS_ADVANCED_OPTIONS');"><a href="loading.gif.html#">Advanced Options</a></td>
+          
+            <td id="tdSS_CONTACT_US" class="rootVoice {menu: 'empty'}" align="center" onclick="onMenuClickFnc('bss/contactus/contactus.jsp','tdSS_CONTACT_US');"><a href="loading.gif.html#">Contact Us</a></td>
+          
+          </tr> 
+        </table>
+      </div>
+			
+	  
+	  		  <div id='menuParentSS_MY_PROFILE' class="mbmenu">
+	  
+	              <a href="javascript:onMenuClickFnc('bss/myprofile/myprofile.jsp','tdSS_MY_PROFILE');">Query My Profile</a>
+	  
+	              <a href="javascript:onMenuClickFnc('bss/myprofile/changepwd.jsp','tdSS_MY_PROFILE');">Change Password</a>
+	  
+	          </div>
+	  
+	  		  <div id='menuParentSS_ADVANCED_OPTIONS' class="mbmenu">
+	  
+	              <a href="javascript:onMenuClickFnc('bss/advancedOptions/accounthistory.jsp','tdSS_ADVANCED_OPTIONS');">Account History</a>
+	  
+	              <a href="javascript:onMenuClickFnc('bss/advancedOptions/paymenthistory.jsp','tdSS_ADVANCED_OPTIONS');">Payment History</a>
+	  
+	              <a href="javascript:onMenuClickFnc('bss/advancedOptions/ocsccdr.jsp','tdSS_ADVANCED_OPTIONS');">Session Internet Query</a>
+	  
+	              <a href="javascript:onMenuClickFnc('bss/advancedOptions/orderinfo.jsp','tdSS_ADVANCED_OPTIONS');">Order History</a>
+	  
+	          </div>
+	  
+    </div>   
+                    
+    <script type="text/javascript">
+    	$(function(){
+        	$(".ssRootMenu").buildMenu({
+                menuWidth:200,
+                openOnRight:false,
+                menuSelector: ".menuContainer",
+                iconPath:"http://myaccount.orange.co.ke/3G/",
+                hasImages:false,
+                fadeInTime:100,
+                fadeOutTime:100,
+                adjustLeft:0,
+                adjustTop:0,
+                opacity:.95,
+                openOnClick:false,
+                minZindex:200,
+                shadow:true,
+                hoverIntent:200,
+                submenuHoverIntent:200,
+                closeOnMouseOut:true
+            });
+        });
+	</script>
+           
+        <!--end menu-->
+      </div>  
+	  <div class="contentbox">	        
+	    <!--begin content-->
+	    <div id="menuContent">
+	    </div>
+	    <!--modified by liu.xin78 task:129319 delete  @include file="loading.inc" -->
+	    
+	    <!--end content-->
+	  </div>
+	  <div class="footer">
+        <!--begin footer-->
+        	
+ 	<div id="footer">  
+		<ul>
+	<li><a href="http://www.orange.co.ke/en/tujuane/" class="linkarraw" target="_blank">Tujuane Tariff</a></li>
+	<li><a href="http://www.orange.co.ke/en/biasharatalk/" class="linkarraw" target="_blank">Biashara Talk</a></li>
+	<li><a href="http://www.orange.co.ke/en/internet-on-smartphones/" class="linkarraw" target="_blank">Internet on your phone</a></li>
+	<li><a href="http://www.orange.co.ke/en/pewa/" class="linkarraw" target="_blank">Pewa Airtime</a></li>
+	<li><a href="http://www.orange.co.ke/en/orange-shop/" class="linkarraw" target="_blank">Smartphone offers</a></li>
+	<li><a href="http://www.orange.co.ke/en/ziada-points/" class="linkarraw" target="_blank">Ziada points</a></li>
+	<li class="last"><a href="http://www.orange.co.ke/en/contact-us/" class="linkarraw" target="_blank">Customercare</a></li>
+		</ul>  
+	 </div>
+
+        <!--end footer-->
+      </div> 	        
+  </div> 
+</body>
+</html>

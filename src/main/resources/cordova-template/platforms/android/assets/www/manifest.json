@@ -1,0 +1,16 @@
+{
+  	"name": "FixApp",
+  	"description": "Fixtures and predictions",
+  	"icons": [{
+    	"src": "img/app-icon.png",
+    	"sizes": "192x192"
+  	}],
+  	"start_url": "http://159.203.122.85:8080/fix/#/latest",
+  	"mjs_api_access": [{ 
+  		"match": "*", 
+  		"platform": "android, ios, windows", 
+  		"access": "cordova" 
+  	}],
+	"mjs_cordova": {"plugin_mode": "client"},
+	"mjs_import_scripts": [{ "src": "js/init_admob.js" }]
+}
