@@ -76,7 +76,7 @@ public class ClassificationStorageServiceImpl implements ClassificationStorageSe
 		return null;
 	}
 	
-	/* (non-Javadoc)
+	/* (non-Javadoc) wow
 	 * @see com.cloderia.helion.client.shared.service.ClassificationStorageService#create(com.cloderia.helion.client.shared.operation.ClassificationOperation)
 	 */
 	@Override
